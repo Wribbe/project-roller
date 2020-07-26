@@ -4,12 +4,20 @@ let start = 1;
 let stop = 100;
 
 for (let i=1; i<stop+1; i++) {
-  root.innerHTML += ('00' + i).slice(-3) + ': ';
+
+  let str = "";
   if (i % 3 === 0) {
-    root.innerHTML += 'Fizz'
+    str += "Fizz";
   }
   if (i % 5 === 0) {
-    root.innerHTML += 'Buzz'
+    str += "Buzz";
   }
-  root.innerHTML += "<br>"
+
+  if (str === "") {
+    root.innerHTML += ('00' + i).slice(-3);
+  } else {
+    root.innerHTML += str;
+  }
+
+  root.innerHTML += "<br>";
 }
