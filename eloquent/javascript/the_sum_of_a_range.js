@@ -1,10 +1,17 @@
 let root = document.getElementById('root');
 
 
-function range(from=0, to) {
+function range(from=0, to, step=1) {
   array = [];
-  for (i=from; i<to; i++) {
-    array.push(i);
+
+  if (step > 0) {
+    for (i=from; i<to; i += step) {
+      array.push(i);
+    }
+  } else {
+    for (i=from; i>to; i += step) {
+      array.push(i);
+    }
   }
   return array;
 };
@@ -18,4 +25,7 @@ function sum(list) {
   return sum;
 }
 
-root.innerHTML = `${sum(range(0,10))}`;
+root.innerHTML += `${range(0,10)}</br>`;
+root.innerHTML += `${sum(range(0,10))}</br>`;
+root.innerHTML += `${range(0,10,4)}</br>`;
+root.innerHTML += `${range(5,2,-2)}</br>`;
