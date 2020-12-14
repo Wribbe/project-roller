@@ -5,8 +5,7 @@ function our_loop(value, test, update, body){
     return value;
   }
   body(value);
-  value = update(value);
-  return our_loop(value, test, update, body);
+  return our_loop(update(value), test, update, body);
 }
 
 our_loop(1,
