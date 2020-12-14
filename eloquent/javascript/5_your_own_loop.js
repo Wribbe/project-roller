@@ -9,16 +9,22 @@ function our_loop(value, test, update, body){
   return our_loop(value, test, update, body);
 }
 
-function test(value) {
-  return value < 5;
-}
+our_loop(1,
+  (x) => x < 5,
+  (x) => x+1,
+  (x) => console.log(x)
+);
 
-function update(value) {
-  return value + 1;
-}
-
-function body(value) {
-  console.log(value);
-}
-
-our_loop(1, test, update, body);
+//function test(value) {
+//  return value < 5;
+//}
+//
+//function update(value) {
+//  return value + 1;
+//}
+//
+//function body(value) {
+//  console.log(value);
+//}
+//
+//our_loop(1, test, update, body);
