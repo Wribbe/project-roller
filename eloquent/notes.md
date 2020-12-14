@@ -52,7 +52,7 @@ Usually takes a sum-function and a starting-value apart from the array in
 question.
 
 ```
-function reduce(array, combine start) {
+function reduce(array, combine, start) {
   let current = start;
   for (let element of array) {
     current = combine(current, element);
@@ -72,7 +72,7 @@ Following example finds average year of origin for live/dead scripts.
 
 ```
 function average(array) {
-  return array.reduce(a, b) => a + b) / array.length;
+  return array.reduce((a, b) => a + b) / array.length;
 }
 
 console.log(Math.round(average(
