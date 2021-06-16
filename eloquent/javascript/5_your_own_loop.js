@@ -11,7 +11,7 @@ function our_loop(value, test, update, body){
 our_loop(1,
   (x) => x < 5,
   (x) => x+1,
-  (x) => console.log(x)
+  (x) => root.innerHTML += `<br>${x}`
 );
 
 //function test(value) {
